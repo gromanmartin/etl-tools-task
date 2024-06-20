@@ -1,0 +1,51 @@
+[build-system]
+requires = ['setuptools>=61.0']
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "etl_tools"
+requires-python = ">=3.10"
+version = "1.0.0"
+description = "ETL tools for downloading and uploading data."
+authors = [
+    {name = "Martin Groman"}
+]
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+]
+
+dependencies = [
+    "requests",
+    "pandas",
+    "fastparquet"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest"
+]
+dev = [
+    "pre-commit",
+    "pylint"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+line_length = 120
+
+[tool.pytest.ini_options]
+log_format = "%(asctime)s %(levelname)-8s %(name)s %(message)s"
+log_date_format = "%Y-%m-%d %H:%M:%S"
+filterwarnings = ["ignore::DeprecationWarning", "ignore::FutureWarning", "ignore::RuntimeWarning"]
