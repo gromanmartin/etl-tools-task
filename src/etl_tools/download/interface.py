@@ -15,9 +15,9 @@ class IDownloader(ABC):
     @abstractmethod
     def save_to_parquet(self, content: bytes, file_path: Path) -> None:
         """Save in-memory stored file to parquet."""
-        raise NotImplementedError("Subclass hasn't implemented method 'convert_to_parquet'.")
+        raise NotImplementedError("Subclass hasn't implemented method 'save_to_parquet'.")
 
     @abstractmethod
     def download_to_parquet(self, url: str, file_path: Path) -> None:
         """Downloads a single file into memory, converts it to parquet and stores locally."""
-        raise NotImplementedError("Subclass hasn't implemented method 'save_to_parquet'.")
+        raise NotImplementedError("Subclass hasn't implemented method 'download_to_parquet'.")

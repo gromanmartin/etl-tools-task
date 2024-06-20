@@ -19,7 +19,8 @@ classifiers = [
 dependencies = [
     "requests",
     "pandas",
-    "fastparquet"
+    "fastparquet",
+    "boto3"
 ]
 
 [project.optional-dependencies]
