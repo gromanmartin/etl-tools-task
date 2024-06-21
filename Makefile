@@ -29,3 +29,11 @@ install-test:
 .PHONY: test
 test:
 	python -m pytest tests
+
+.PHONY: build
+build:
+	docker build -f ./db/Dockerfile -t pg-db .
+
+.PHONY: run-db
+run-db:
+	docker run --rm --name postgres_db -p 5000:5432 -d pg-db

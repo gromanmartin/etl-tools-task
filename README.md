@@ -1,2 +1,2 @@
 # README
-This Python package is main purpose is to illustrate current level of Python proficiency of the author rather than being actually usable for real world usecases.
+This Python package is main purpose is to illustrate current level of Python proficiency of the author rather than being actually usable for real world usecases. This is only magnified by the fact, that this repo was created while working with https://catalog.data.gov/dataset/lottery-powerball-winning-numbers-beginning-2010 dataset.

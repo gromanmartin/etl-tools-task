@@ -20,7 +20,7 @@ dependencies = [
     "requests",
     "pandas",
     "fastparquet",
-    "boto3"
+    "sqlalchemy"
 ]
 
 [project.optional-dependencies]
