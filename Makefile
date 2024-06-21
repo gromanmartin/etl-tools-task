@@ -11,19 +11,20 @@ clean:
 venv:
 	python3 -m venv .venv
 
+.PHONY: venv-activate
+venv-activate:
+	. .venv/bin/activate
+
 .PHONY: install
 install:
-	. .venv/bin/activate
 	python3 -m pip install .
 
 .PHONY: install-editable
 install-editable:
-	. .venv/bin/activate
 	python3 -m pip install -e .
 
 .PHONY: install-test
 install-test:
-	. .venv/bin/activate
 	python3 -m pip install -e .[test]
 
 .PHONY: test
@@ -37,3 +38,7 @@ build:
 .PHONY: run-db
 run-db:
 	docker run --rm --name postgres_db -p 5000:5432 -d pg-db
+
+.PHONY: etl
+etl:
+	. ./run.sh
